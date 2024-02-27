@@ -33,30 +33,39 @@ Features gestionale Ex-allievi
 
 -Amministratore:
 Gestione degli Ex Allievi:
+
 2) Visualizzazione delle informazioni degli ex allievi.    4
+
 3) Modifica e eliminazione delle informazioni degli ex allievi per garantire l'accuratezza dei dati.    3
 
 Configurazione delle Impostazioni di Sicurezza:
+
 4) Configurazione delle impostazioni di sicurezza del sistema, inclusi firewall e accesso al database.      5
 
 -Ex Allievo:
 
 Registrazione del Profilo:
+
 5) Registrazione nel sistema inserendo dati anagrafici, accademici/lavorativi e descrittivi.        2
+
 6) Possibilità di aggiornare il proprio profilo.        1
 
 -Scuola o Azienda:
 Ricerca degli Ex Allievi:
+
 7) Possibilità di cercare gli ex allievi in base alle loro attività successive alla laurea o al diploma.    3
 
 -Sviluppatore:
 Ottimizzazione delle Query del Database:
+
 8) Implementazione di query del database ottimizzate per garantire prestazioni elevate anche con un grande volume di dati.      6
 
 Aggiornamento Librerie e Framework:
+
 9) Aggiornamento regolare di tutte le librerie e i framework utilizzati nell'applicazione per evitare problemi di incompatibilità.      4
 
 Gestione delle Sessioni Utente:
+
 10) Implementazione di una corretta gestione delle sessioni utente per garantire sicurezza e fluidità dell'esperienza utente.       3
 
 -------------------------------------------------------------------------------------------------------------------------------------------------
