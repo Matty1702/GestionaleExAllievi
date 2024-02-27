@@ -75,6 +75,7 @@ User stories Ex-allievi
 A) login,logout,recupero credenziali priortià: 0
 
 Amministratore:
+
 B) Desidero poter visualizzare degli ex allievi per garantire l'accuratezza dei dati nel registro.  priortià:13
 
 C) Desidero modificare ed eliminare le informazioni degli ex allievi per garantire l'accuratezza dei dati nel registro.  priortià:40
@@ -82,13 +83,17 @@ C) Desidero modificare ed eliminare le informazioni degli ex allievi per garanti
 D) Voglio poter configurare le impostazioni di sicurezza del sistema, inclusi il firewall e l'accesso al database, per garantire la protezione dei dati sensibili. priortià:0
 
 Ex Allievo:
+
 E) Desidero poter registrarmi nel sistema inserendo i miei dati anagrafici, accademici/lavorativi e descrittivi per mantenere aggiornato il mio profilo. priortià: 1
+
 F) Desidero poter modificare i dati del profilo per aggiornarlo 2
 
 Scuola o Azienda:
+
 G) Voglio poter cercare gli ex allievi in base alle loro attività successive alla laurea o al diploma per identificare potenziali candidati o mantenere il contatto con loro. priortià: 8
 
 Sviluppatore:
+
 H) Voglio ottimizzare le query del database per assicurare prestazioni elevate dell'applicazione anche con un grande volume di dati. priortià: 3
 
 I) Vogliamo mantenere tutte le librerie e i framework utilizzati nell'applicazione aggiornati e compatibili per evitare problemi di incompatibilità. priortià: 5
