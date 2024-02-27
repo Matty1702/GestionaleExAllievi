@@ -29,42 +29,37 @@ Implementazione di una corretta gestione delle sessioni utente per garantire sic
 
 Features gestionale Ex-allievi
 
+login,logout,recupero credenziali    2
 
 -Amministratore:
-
-Login Sicuro:
-Implementazione di un sistema di login sicuro per l'amministratore con autenticazione multi-fattore.
-
 Gestione degli Ex Allievi:
-Visualizzazione delle informazioni degli ex allievi.
-Modifica e eliminazione delle informazioni degli ex allievi per garantire l'accuratezza dei dati.
+Visualizzazione delle informazioni degli ex allievi.    4
+Modifica e eliminazione delle informazioni degli ex allievi per garantire l'accuratezza dei dati.    3
 
 Configurazione delle Impostazioni di Sicurezza:
-Configurazione delle impostazioni di sicurezza del sistema, inclusi firewall e accesso al database.
+Configurazione delle impostazioni di sicurezza del sistema, inclusi firewall e accesso al database.      5
 
 -Ex Allievo:
 
 Registrazione del Profilo:
-Registrazione nel sistema inserendo dati anagrafici, accademici/lavorativi e descrittivi.
-Possibilità di aggiornare il proprio profilo.
+Registrazione nel sistema inserendo dati anagrafici, accademici/lavorativi e descrittivi.        2
+Possibilità di aggiornare il proprio profilo.        1
 
 -Scuola o Azienda:
-
 Ricerca degli Ex Allievi:
-Possibilità di cercare gli ex allievi in base alle loro attività successive alla laurea o al diploma.
+Possibilità di cercare gli ex allievi in base alle loro attività successive alla laurea o al diploma.    3
 
 -Sviluppatore:
-
 Ottimizzazione delle Query del Database:
-Implementazione di query del database ottimizzate per garantire prestazioni elevate anche con un grande volume di dati.
+Implementazione di query del database ottimizzate per garantire prestazioni elevate anche con un grande volume di dati.      6
 
 Aggiornamento Librerie e Framework:
-Aggiornamento regolare di tutte le librerie e i framework utilizzati nell'applicazione per evitare problemi di incompatibilità.
+Aggiornamento regolare di tutte le librerie e i framework utilizzati nell'applicazione per evitare problemi di incompatibilità.      4
 
 Gestione delle Sessioni Utente:
-Implementazione di una corretta gestione delle sessioni utente per garantire sicurezza e fluidità dell'esperienza utente.
+Implementazione di una corretta gestione delle sessioni utente per garantire sicurezza e fluidità dell'esperienza utente.       3
 
----------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------
 
 User stories Ex-allievi
 
