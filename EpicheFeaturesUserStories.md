@@ -67,21 +67,26 @@ Implementazione di una corretta gestione delle sessioni utente per garantire sic
 ---------------------------------------------------------------------------------------------------------
 
 User stories Ex-allievi
+login,logout,recupero credenziali priortià:1/2
 
 Amministratore:
-Voglio poter accedere al sistema attraverso un login sicuro per poter gestire le informazioni degli ex allievi.
-Desidero poter visualizzare, modificare ed eliminare le informazioni degli ex allievi per garantire l'accuratezza dei dati nel registro.
-Voglio poter configurare le impostazioni di sicurezza del sistema, inclusi il firewall e l'accesso al database, per garantire la protezione dei dati sensibili.
+Desidero poter visualizzare, modificare ed eliminare le informazioni degli ex allievi per garantire l'accuratezza dei dati nel registro.  priortià:13
+
+Voglio poter configurare le impostazioni di sicurezza del sistema, inclusi il firewall e l'accesso al database, per garantire la protezione dei dati sensibili. priortià:0
 
 Ex Allievo:
-Desidero poter registrarmi nel sistema inserendo i miei dati anagrafici, accademici/lavorativi e descrittivi per mantenere aggiornato il mio profilo.
-Desidero poter ricevere notifiche o messaggi dalla scuola o dalle aziende interessate per rimanere aggiornato sulle opportunità professionali.
+Desidero poter registrarmi nel sistema inserendo i miei dati anagrafici, accademici/lavorativi e descrittivi per mantenere aggiornato il mio profilo. priortià: 2
+
+Desidero poter ricevere notifiche o messaggi dalla scuola o dalle aziende interessate per rimanere aggiornato sulle opportunità professionali. priortià: 40
 
 Scuola o Azienda:
-Voglio poter cercare gli ex allievi in base alle loro attività successive alla laurea o al diploma per identificare potenziali candidati o mantenere il contatto con loro.
-Voglio poter contattare gli ex allievi direttamente attraverso il sistema per richiedere informazioni aggiuntive o organizzare colloqui.
+Voglio poter cercare gli ex allievi in base alle loro attività successive alla laurea o al diploma per identificare potenziali candidati o mantenere il contatto con loro. priortià: 8
+
+Voglio poter contattare gli ex allievi direttamente attraverso il sistema per richiedere informazioni aggiuntive o organizzare colloqui. priortià: 21
 
 Sviluppatore:
-Voglio ottimizzare le query del database per assicurare prestazioni elevate dell'applicazione anche con un grande volume di dati.
-Vogliamo mantenere tutte le librerie e i framework utilizzati nell'applicazione aggiornati e compatibili per evitare problemi di incompatibilità.
-Vogliamo implementare una corretta gestione delle sessioni utente per garantire la sicurezza e la fluidità dell'esperienza dell'utente durante la navigazione nel sistema.
+Voglio ottimizzare le query del database per assicurare prestazioni elevate dell'applicazione anche con un grande volume di dati. priortià: 3
+
+Vogliamo mantenere tutte le librerie e i framework utilizzati nell'applicazione aggiornati e compatibili per evitare problemi di incompatibilità. priortià: 5
+
+Vogliamo implementare una corretta gestione delle sessioni utente per garantire la sicurezza e la fluidità dell'esperienza dell'utente durante la navigazione nel sistema.  1
