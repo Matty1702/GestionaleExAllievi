@@ -1,0 +1,53 @@
+﻿@page
+@model EnableAuthenticatorModel
+@{
+    ViewData["Title"] = "Configura l'applicazione autenticatore";
+    ViewData["ActivePage"] = ManageNavPages.TwoFactorAuthentication;
+}
+
+<partial name="_StatusMessage" for="StatusMessage" />
+<h3>@ViewData["Title"]</h3>
+<div>
+    <p>Per utilizzare un'applicazione autenticatore, segui i seguenti passaggi:</p>
+    <ol class="list">
+        <li>
+            <p>
+                Scarica un'applicazione autenticatore a due fattori come Microsoft Authenticator per
+                <a href="https://go.microsoft.com/fwlink/?Linkid=825072">Android</a> e
+                <a href="https://go.microsoft.com/fwlink/?Linkid=825073">iOS</a> o
+                Google Authenticator per
+                <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&amp;hl=en">Android</a> e
+                <a href="https://itunes.apple.com/us/app/google-authenticator/id388497605?mt=8">iOS</a>.
+            </p>
+        </li>
+        <li>
+            <p>Scansiona il codice QR o inserisci questa chiave <kbd>@Model.SharedKey</kbd> nella tua applicazione autenticatore a due fattori. Spazi e maiuscole non sono importanti.</p>
+            <div class="alert alert-info">Scopri come <a href="https://go.microsoft.com/fwlink/?Linkid=852423">abilitare la generazione del codice QR</a>.</div>
+            <div id="qrCode"></div>
+            <div id="qrCodeData" data-url="@Model.AuthenticatorUri"></div>
+        </li>
+        <li>
+            <p>
+                Una volta scansionato il codice QR o inserita la chiave sopra, la tua app di autenticazione a due fattori ti fornirà
+                un codice unico. Inserisci il codice nella casella di conferma qui sotto.
+            </p>
+            <div class="row">
+                <div class="col-md-6">
+                    <form id="send-code" method="post">
+                        <div class="form-floating mb-3">
+                            <input asp-for="Input.Code" class="form-control" autocomplete="off" placeholder="Inserisci il codice." />
+                            <label asp-for="Input.Code" class="control-label form-label">Codice di Verifica</label>
+                            <span asp-validation-for="Input.Code" class="text-danger"></span>
+                        </div>
+                        <button type="submit" class="w-100 btn btn-lg btn-primary">Verifica</button>
+                        <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+                    </form>
+                </div>
+            </div>
+        </li>
+    </ol>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
