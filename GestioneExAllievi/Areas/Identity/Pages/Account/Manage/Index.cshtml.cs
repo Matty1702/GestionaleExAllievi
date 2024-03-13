@@ -52,6 +52,10 @@ namespace GestioneExAllievi.Areas.Identity.Pages.Account.Manage
         [Display(Name = "Numero di Telefono")]
         public string PhoneNumber { get; set; }
 
+        [Required(ErrorMessage = "Il campo Codice Fiscale è obbligatorio.")]
+        [RegularExpression(@"^[A-Z]{6}\d{2}[A-Z]\d{2}[A-Z]\d{3}[A-Z]$", ErrorMessage = "Il Codice Fiscale non è valido.")]
+        public string CodiceFiscale { get; set; }
+
         private async Task LoadAsync(GestioneExAllieviUser user)
         {
             var userName = await _userManager.GetUserNameAsync(user);
@@ -59,6 +63,7 @@ namespace GestioneExAllievi.Areas.Identity.Pages.Account.Manage
 
             Username = userName;
             PhoneNumber = phoneNumber;
+            CodiceFiscale = user.CodiceFiscale;
         }
 
         public async Task<IActionResult> OnGetAsync()
@@ -98,6 +103,10 @@ namespace GestioneExAllievi.Areas.Identity.Pages.Account.Manage
                 }
             }
 
+            if (CodiceFiscale != user.CodiceFiscale)
+            {
+                user.CodiceFiscale = CodiceFiscale;
+            }
             await _signInManager.RefreshSignInAsync(user);
             StatusMessage = "Il tuo profilo è stato aggiornato";
             return RedirectToPage();

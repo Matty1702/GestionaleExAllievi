@@ -103,6 +103,10 @@ namespace GestioneExAllievi.Areas.Identity.Pages.Account
             [DataType(DataType.Text)]
             public string UserType { get; set; }
 
+            [Required(ErrorMessage = "Il campo Codice Fiscale è obbligatorio.")]
+            [RegularExpression(@"^[A-Z]{6}\d{2}[A-Z]\d{2}[A-Z]\d{3}[A-Z]$", ErrorMessage = "Il Codice Fiscale non è valido.")]
+            public string CodiceFiscale { get; set; }
+
             [Required]
             [Phone]
             [Display(Name = "Numero di telefono")]
@@ -125,6 +129,7 @@ namespace GestioneExAllievi.Areas.Identity.Pages.Account
                 var user = CreateUser();
 
                 user.UserType = Input.UserType;
+                user.CodiceFiscale = Input.CodiceFiscale;
                 user.PhoneNumber = Input.PhoneNumber;
 
                 await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);

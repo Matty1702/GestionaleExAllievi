@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using GestioneExAllievi.Models;
 
 namespace GestioneExAllievi.Data;
 
@@ -19,4 +20,6 @@ public class GestioneExAllieviContext : IdentityDbContext<GestioneExAllieviUser>
         // For example, you can rename the ASP.NET Identity table names and more.
         // Add your customizations after calling base.OnModelCreating(builder);
     }
+
+    public DbSet<GestioneExAllievi.Models.DatiExAllievi> DatiExAllievi { get; set; } = default!;
 }

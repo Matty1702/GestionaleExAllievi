@@ -4,6 +4,7 @@ using GestioneExAllievi.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GestioneExAllievi.Migrations
 {
     [DbContext(typeof(GestioneExAllieviContext))]
-    partial class GestioneExAllieviContextModelSnapshot : ModelSnapshot
+    [Migration("20240311080446_CustomUserData")]
+    partial class CustomUserData
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -93,68 +96,6 @@ namespace GestioneExAllievi.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers", (string)null);
-                });
-
-            modelBuilder.Entity("GestioneExAllievi.Models.DatiExAllievi", b =>
-                {
-                    b.Property<string>("CodiceFiscale")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<bool>("CercaLavoro")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("Cognome")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("CurriculumFilePath")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("EOccupato")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("FrequentaUniversita")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("Indirizzo")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Nome")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("NumTelefono")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("SocialMedia")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Specializzazione")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<decimal>("StipendioMensileAttuale")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<decimal>("StipendioMensileRichiesto")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<string>("TitoloDiStudio")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("UsernamesSocialMedia")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("CodiceFiscale");
-
-                    b.ToTable("DatiExAllievi");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
