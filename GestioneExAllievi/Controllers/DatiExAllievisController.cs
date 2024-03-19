@@ -24,34 +24,37 @@ namespace GestioneExAllievi.Controllers
         // GET: DatiExAllievis
         public async Task<IActionResult> Index(string searchString, string searchString1)
         {
-            if (_context.DatiExAllievi == null)
-            {
-                return Problem("Entity set 'GestioneExAllieviContext.DatiExAllievi' is null.");
-            }
+            // Check if user email exists in cookies
+            var userEmail = Request.Cookies["UserEmail"];
 
-            var datiExAllievi = from d in _context.DatiExAllievi
-                                select d;
-
-            if (!String.IsNullOrEmpty(searchString))
+            if (!string.IsNullOrEmpty(userEmail))
             {
-                datiExAllievi = datiExAllievi.Where(s => s.Specializzazione!.Contains(searchString));
-            }
+                IQueryable<DatiExAllievi> datiExAllieviQuery = _context.DatiExAllievi;
 
-            if (!String.IsNullOrEmpty(searchString1))
-            {
-                decimal stipendioRichiesto;
-                if (!decimal.TryParse(searchString1, out stipendioRichiesto))
+                if (!string.IsNullOrEmpty(searchString))
                 {
-                    return View(await datiExAllievi.ToListAsync());
+                    datiExAllieviQuery = datiExAllieviQuery.Where(s => s.Specializzazione!.Contains(searchString));
                 }
-                else
-                {
-                    datiExAllievi = datiExAllievi.Where(s => s.StipendioMensileRichiesto == stipendioRichiesto);
-                }
-            }
 
-            return View(await datiExAllievi.ToListAsync());
+                if (!string.IsNullOrEmpty(searchString1) && decimal.TryParse(searchString1, out decimal stipendioRichiesto))
+                {
+                    datiExAllieviQuery = datiExAllieviQuery.Where(s => s.StipendioMensileRichiesto == stipendioRichiesto);
+                }
+
+                // Filter ex-alumni data by user email
+                var datiExAllievi = await datiExAllieviQuery
+                    .Where(d => d.Email == userEmail)
+                    .ToListAsync();
+
+                return View(datiExAllievi);
+            }
+            else
+            {
+                // If user email is not found in cookies, return an error
+                return Problem("UTENTE NON ESISTENTE, CHIEDERE ALL'AMMINISTRATORE DI ESSERE AGGIUNTI");
+            }
         }
+
 
 
         // GET: DatiExAllievis/Details/5
