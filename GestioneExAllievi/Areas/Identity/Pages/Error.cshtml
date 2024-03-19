@@ -1,0 +1,24 @@
+﻿@page
+@model ErrorModel
+@{
+    ViewData["Title"] = "Errore";
+}
+
+<h1 class="text-danger">Errore.</h1>
+<h2 class="text-danger">Si è verificato un errore durante l'elaborazione della tua richiesta.</h2>
+
+@if (Model.ShowRequestId)
+{
+    <p>
+        <strong>ID della richiesta:</strong> <code>@Model.RequestId</code>
+    </p>
+}
+
+<h3>Modalità Sviluppo</h3>
+<p>
+    Passare alla modalità <strong>Sviluppo</strong> mostrerà informazioni più dettagliate sull'errore che si è verificato.
+</p>
+<p>
+    La <strong>modalità Sviluppo non dovrebbe essere abilitata nelle applicazioni distribuite</strong>, poiché può comportare la visualizzazione di informazioni sensibili dalle eccezioni agli utenti finali. Per il debug locale, la modalità Sviluppo può essere abilitata impostando la variabile d'ambiente <strong>ASPNETCORE_ENVIRONMENT</strong> su <strong>Sviluppo</strong> e riavviando l'applicazione.
+</p>
+

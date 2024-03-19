@@ -1,0 +1,55 @@
+﻿@page
+@model ShowRecoveryCodesModel
+@{
+    ViewData["Title"] = "Codici di ripristino";
+    ViewData["ActivePage"] = "TwoFactorAuthentication";
+}
+
+<partial name="_StatusMessage" for="StatusMessage" />
+<h3>@ViewData["Title"]</h3>
+<div class="alert alert-warning" role="alert">
+    <p>
+        <strong>Metti questi codici in un posto sicuro.</strong>
+    </p>
+    <p>
+        Se perdi il tuo dispositivo e non hai i codici di ripristino, perderai l'accesso al tuo account.
+    </p>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        @for (var row = 0; row < Model.RecoveryCodes.Length; row += 2)
+        {
+            <code class="recovery-code">@Model.RecoveryCodes[row]</code><text>&nbsp;</text><code class="recovery-code">@Model.RecoveryCodes[row + 1]</code><br />
+        }
+    </div>
+</div>
+@{
+    ViewData["Title"] = "Codici di ripristino";
+    ViewData["ActivePage"] = "TwoFactorAuthentication";
+}
+
+<partial name="_StatusMessage" for="StatusMessage" />
+<h3>@ViewData["Title"]</h3>
+<div class="alert alert-warning" role="alert">
+    <p>
+        <strong>Metti questi codici in un posto sicuro.</strong>
+    </p>
+    <p>
+        Se perdi il tuo dispositivo e non hai i codici di ripristino, perderai l'accesso al tuo account.
+    </p>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        @for (var row = 0; row < Model.RecoveryCodes.Length; row += 2)
+        {
+            <code class="recovery-code">@Model.RecoveryCodes[row]</code>
+
+            <text>&nbsp;</text>
+
+            <code class="recovery-code">@Model.RecoveryCodes[row + 1]</code>
+
+            <br />
+        }
+    </div>
+</div>
+

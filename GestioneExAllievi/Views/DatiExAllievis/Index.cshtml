@@ -1,0 +1,82 @@
+﻿@model IEnumerable<GestioneExAllievi.Models.DatiExAllievi>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Dati ex allievi</h1>
+<form asp-controller="DatiExAllievis" asp-action="Index">
+    <p>
+        Specializzazione richiesta: <input type="text" name="SearchString" />
+        Stipendio richiesto: <input type="text" name="SearchString1" />
+        <input type="submit" value="Filtra" />
+    </p>
+</form>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cognome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TitoloDiStudio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Specializzazione)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FrequentaUniversita)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CercaLavoro)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EOccupato)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StipendioMensileRichiesto)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cognome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TitoloDiStudio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Specializzazione)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FrequentaUniversita)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CercaLavoro)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EOccupato)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StipendioMensileRichiesto)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.CodiceFiscale">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.CodiceFiscale">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.CodiceFiscale">Delete</a> |
+                <a asp-action="CaricaCurriculum">CaricaCurriculum</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

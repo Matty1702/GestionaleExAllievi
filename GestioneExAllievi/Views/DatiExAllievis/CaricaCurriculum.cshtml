@@ -1,0 +1,72 @@
+﻿@model UploadViewModel
+
+@{
+    ViewData["Title"] = "Upload";
+}
+<style>
+    /* Style for form container */
+    .form-container {
+        max-width: 200px;
+        margin: 0 auto;
+    }
+
+    /* Style for form heading */
+    .form-heading {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    /* Style for form group */
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+        /* Style for label */
+        .form-group label {
+            display: block;
+            font-weight: bold;
+        }
+
+        /* Style for file input */
+        .form-group input[type="file"] {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        /* Style for validation error message */
+        .form-group .text-danger {
+            font-size: 14px;
+        }
+
+    /* Style for submit button */
+    .btn-primary {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        background-color: #007bff;
+        border: none;
+        border-radius: 4px;
+        color: #fff;
+        cursor: pointer;
+    }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+</style>
+<h1>Carica curriculum</h1>
+
+<form asp-action="Upload" method="post" enctype="multipart/form-data">
+
+    <div class="form-group">
+        <label asp-for="File">Seleziona File</label>
+        <input asp-for="File" type="file" class="form-control-file" />
+        <span asp-validation-for="File" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Carica</button>
+</form>

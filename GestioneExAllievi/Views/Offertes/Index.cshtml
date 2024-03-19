@@ -1,0 +1,64 @@
+﻿@model IEnumerable<GestioneExAllievi.Models.Offerte>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Offerte Lavorative</h1>
+
+<form asp-controller="Offertes" asp-action="Index">
+    <p>
+        Specializzazione richiesta: <input type="text" name="SearchString2" />
+        Salario richiesto: <input type="number" name="SearchString3" />
+        <input type="submit" value="Filtra" />
+    </p>
+</form>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Titolo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Specializzazione)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Descrizione)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Luogo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Salario)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Titolo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Specializzazione)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descrizione)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Luogo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Salario)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
