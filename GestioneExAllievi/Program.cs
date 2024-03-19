@@ -16,6 +16,7 @@ builder.Services.AddDefaultIdentity<GestioneExAllieviUser>(options => options.Si
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
 
+//sessioni e cookie
 builder.Services.Configure<IdentityOptions>(options =>
 {
     // Password settings.
