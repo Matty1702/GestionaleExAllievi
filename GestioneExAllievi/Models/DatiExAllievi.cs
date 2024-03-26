@@ -47,8 +47,8 @@ namespace GestioneExAllievi.Models
         public bool FrequentaUniversita { get; set; }
         public bool CercaLavoro { get; set; }
         public bool EOccupato { get; set; }
-        public decimal StipendioMensileAttuale { get; set; } 
-        public decimal StipendioMensileRichiesto { get; set; }
+        public int StipendioMensileAttuale { get; set; } 
+        public int StipendioMensileRichiesto { get; set; }
         public string? CurriculumFilePath { get; set; }
     }
 

@@ -12,7 +12,7 @@
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="CodiceFiscale" class="control-label"></label>
+                <label asp-for="CodiceFiscale" class="control-label">Codice fiscale</label>
                 <input asp-for="CodiceFiscale" class="form-control" />
                 <span asp-validation-for="CodiceFiscale" class="text-danger"></span>
             </div>
@@ -32,7 +32,7 @@
                 <span asp-validation-for="Indirizzo" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="NumTelefono" class="control-label"></label>
+                <label asp-for="NumTelefono" class="control-label"> Numero di telefono</label>
                 <input asp-for="NumTelefono" class="form-control" />
                 <span asp-validation-for="NumTelefono" class="text-danger"></span>
             </div>
@@ -42,7 +42,7 @@
                 <span asp-validation-for="Email" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="SocialMedia" class="control-label"></label>
+                <label asp-for="SocialMedia" class="control-label">Social Media</label>
                 <select asp-for="SocialMedia" asp-items="@Html.GetEnumSelectList<SocialMediaType>()" class="form-control"></select>
                 <span asp-validation-for="SocialMedia" class="text-danger"></span>
             </div>
@@ -52,7 +52,7 @@
                 <span asp-validation-for="UsernamesSocialMedia" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="TitoloDiStudio" class="control-label"></label>
+                <label asp-for="TitoloDiStudio" class="control-label">Titolo di studio</label>
                 <input asp-for="TitoloDiStudio" class="form-control" />
                 <span asp-validation-for="TitoloDiStudio" class="text-danger"></span>
             </div>
@@ -77,12 +77,12 @@
                 </label>
             </div>
             <div class="form-group">
-                <label asp-for="StipendioMensileAttuale" class="control-label"></label>
+                <label asp-for="StipendioMensileAttuale" class="control-label">Stipendio mensile attuale (in euro)</label>
                 <input asp-for="StipendioMensileAttuale" class="form-control"/>
                 <span asp-validation-for="StipendioMensileAttuale" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="StipendioMensileRichiesto" class="control-label"></label>
+                <label asp-for="StipendioMensileRichiesto" class="control-label">Stipendio mensile richiesto (in euro)</label>
                 <input asp-for="StipendioMensileRichiesto" class="form-control"/>
                 <span asp-validation-for="StipendioMensileRichiesto" class="text-danger"></span>
             </div>
