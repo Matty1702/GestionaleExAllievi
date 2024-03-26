@@ -106,9 +106,20 @@ namespace GestioneExAllievi.Controllers
                 }
                 else
                 {
+                    var codiceFiscaleFromEmail = _context.DatiExAllievi
+                                                    .Where(a => a.Email == datiExAllievi.Email)
+                                                    .Select(a => a.CodiceFiscale)
+                                                    .FirstOrDefault();
+
+                    if (!string.IsNullOrEmpty(codiceFiscaleFromEmail))
+                    {
+                        datiExAllievi.CodiceFiscale = codiceFiscaleFromEmail;
+                    }
+
                     _context.Add(datiExAllievi);
                     await _context.SaveChangesAsync();
                 }
+
 
                 return RedirectToAction(nameof(Index));
             }
