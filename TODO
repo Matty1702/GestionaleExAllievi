@@ -1,6 +1,6 @@
 TODO
-
--Cambiare il tipo della valuta da decimale a intero
--Fixare il bug della edit della virgola (sistemando il primo si dovrebbe fixare il secondo)
++Cambiare il tipo della valuta da decimale a intero
++Fixare il bug della edit della virgola (sistemando il primo si dovrebbe fixare il secondo)
 -Fixare il path del curriculum, il curriculum viene caricato, ma restituita exception legata al campo codice fiscale
 -Effettuare dei test sulla parte del gestionale azienda non ancora testata
+-Miglirare view della Detalis e probabilmente anche della Delete
