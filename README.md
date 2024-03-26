@@ -3,7 +3,7 @@ documentazione\GestionaleExAllievi.md 2024-04-01
 
 **Documentazione per registro di ex allievi** Introduzione
 
-Il software deve essere in grado di gestire tutte le informazioni sugli ex allievi presenti nell' archivio, con lo scopo di aiutare una scuola a presentare statistiche dei propri studenti usciti dall' istituto, di seguito le principali funzioni e i requisiti hardware o software
+Il software deve essere in grado di gestire tutte le informazioni sugli ex allievi presenti nell' archivio, con lo scopo di aiutare una scuola a presentare statistiche dei propri studenti usciti dall' istituto, di seguito le principali funzioni e i requisiti hardware o software.
 
 Principali funzionalità
 
@@ -19,7 +19,7 @@ Requisiti di sistema
 
 - **Sistema operativo**: Windows, in quanto usando linguaggi di programmazione specifici di Microsoft, come C# per il back-end e, Razor per il front-end si adatta perfettamente al contesto d'uso dell'applicazione, o Linux e MacOS.
 - **Front-end**: Razor che è un motore di template che consente l'inserimento di codice C# direttamente nelle pagine HTML. Questo facilita il binding dinamico dei dati nel front-end, consentendo una gestione più efficiente della logica di presentazione.
-- **Back-end**: ASP.NET Core 8.0 che è la versione più recente del framework di sviluppo web di Microsoft. Utilizzando C# come linguaggio principale, si possono sfruttare le funzionalità avanzate del linguaggio, come la strong typing e la gestione avanzata delle eccezioni, inoltre la struttura MVC consente di organizzare il codice in modo modulare, separando il modello dei dati, la logica di presentazione e il controllo del flusso dell'applicazione. Questo facilita la manutenibilità e la scalabilità del software, nonchè il binding dinamico delle pagine
+- **Back-end**: ASP.NET Core 8.0 che è la versione più recente del framework di sviluppo web di Microsoft. Utilizzando C# come linguaggio principale, si possono sfruttare le funzionalità avanzate del linguaggio, come la strong typing e la gestione avanzata delle eccezioni, inoltre la struttura MVC consente di organizzare il codice in modo modulare, separando il modello dei dati, la logica di presentazione e il controllo del flusso dell'applicazione. Questo facilita la manutenibilità e la scalabilità del software, nonchè il binding dinamico delle pagine. nello sviluppo dell' applicazione sarà necessario il salvataggio e l' utilizzo dei cookies per la scelta dei dati da visualizzare ai vari utenti.
 - **Database**: SQLServer, database relazionale che si adatta molto bene all' uso di MVC con ASP.NET, essendo integrato nell' ambiente di sviluppo. Potrebbe essere utilizzato un ORM come Entity Framework, semplificando le operazioni di accesso e manipolazione dei dati nel database attraverso oggetti C#.
 - **Interfaccia utente**: HTML5 con le sue nuove funzionalità, CSS, con Razor connesso al codice C# per l'uso di pagine dinamiche
 
